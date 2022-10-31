@@ -12,6 +12,11 @@ In order to complete this task, you are given an existing JavaScript project tha
 - API calls to `CRUD` an item
 - API call to `authenticate` a user
 
+## How to start
+
+- Fork this repo on your GitHub account and start working.
+
+
 ## Requirements
 
 - Integrate the `Prettier` package and add a script call `format` for it in the package.json file

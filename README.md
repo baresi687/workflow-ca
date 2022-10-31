@@ -16,6 +16,20 @@ In order to complete this task, you are given an existing JavaScript project tha
 
 - Fork this repo on your GitHub account and start working.
 
+## How to run the current project
+
+- Clone the project
+
+- `npm install` to install node modules.
+
+- `npm run build` to build the project.
+
+- `npm run start` on one terminal, the server
+
+- `npm run preview` to run in Production mode and this should be on a different terminal.
+
+- `npm run dev` to run in Development mode and this should be on a different terminal.
+
 
 ## Requirements
 
@@ -47,7 +61,7 @@ In order to complete this task, you are given an existing JavaScript project tha
 
 ## Requirements for `JEST : unit tests`
 
-- The login function returns a valid token when provided with valid credentials
+- The logInUser function returns a valid token when provided with valid credentials
 - The logout function clears the token from browser storage
 - The `create post function` creates a new item on the API (You need to check if the item is created from the API response)
 

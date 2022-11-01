@@ -24,8 +24,6 @@ In order to complete this task, you are given an existing JavaScript project tha
 
 - `npm run build` to build the project.
 
-- `npm run start` on one terminal, the server
-
 - `npm run preview` to run in Production mode and this should be on a different terminal.
 
 - `npm run dev` to run in Development mode and this should be on a different terminal.
@@ -61,9 +59,9 @@ In order to complete this task, you are given an existing JavaScript project tha
 
 ## Requirements for `JEST : unit tests` 🤔
 
-- The logInUser function returns a valid token when provided with valid credentials
-- The logout function clears the token from browser storage
-- The `create post function` creates a new item on the API (You need to check if the item is created from the API response)
+- The `logInUser` function returns a valid token when provided with valid credentials
+- The `logoutUser` function clears the token from browser storage
+- The `createPost` function creates a new item on the API (You need to check if the item is created from the API response)
 
 
 ## Requirements for `end-to-end tests` 🤔

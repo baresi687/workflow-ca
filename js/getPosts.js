@@ -25,7 +25,7 @@ if (!accessToken) {
         const posts = await response.json();
         console.log(posts);
         console.log('GET POSTS SUCCEEDED!!  🥳 🤗🤗');
-        let now = moment(new Date()); //today's date
+        const now = moment(new Date()); // today's date
         console.log('posts: ', posts);
         if (!posts.length) {
             postsNotificationMessage.innerHTML = 'Sorry no posts currently';

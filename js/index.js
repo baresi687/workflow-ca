@@ -6,7 +6,7 @@ createHeaderBar();
 const logOutBtn = document.querySelector('#logout-btn');
 
 if (logOutBtn) {
-    logOutBtn.addEventListener('click', function () {
+    logOutBtn.addEventListener('click', () => {
         logoutUser();
     });
 

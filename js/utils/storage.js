@@ -11,9 +11,8 @@ function getToken() {
     const value = localStorage.getItem(tokenKey);
     if (value) {
         return JSON.parse(value); // convert to JS
-    } else {
-        return null;
     }
+    return null;
 }
 
 // save user object
@@ -25,9 +24,8 @@ function getUserName() {
     const user = getFromStorage(userKey);
     if (userKey) {
         return user.name;
-    } else {
-        return null;
     }
+    return null;
 }
 
 // function which save data to the local storage
@@ -40,9 +38,8 @@ function getFromStorage(key) {
     const value = localStorage.getItem(key);
     if (value) {
         return JSON.parse(value); // convert to JS
-    } else {
-        return [];
     }
+    return [];
 }
 
 function clearStorage() {

@@ -49,7 +49,7 @@ getPostById().catch((err) => {
     console.log(err);
 });
 
-editPostForm.addEventListener('submit', function (event) {
+editPostForm.addEventListener('submit', (event) => {
     event.preventDefault();
     let isPostTitle = false;
     if (postTitle.value.trim().length > 0) {
@@ -67,7 +67,7 @@ editPostForm.addEventListener('submit', function (event) {
         postDescriptionError.classList.remove('hidden');
     }
 
-    let isFormValid = isPostTitle && isPostDescription;
+    const isFormValid = isPostTitle && isPostDescription;
 
     if (isFormValid) {
         console.log('Validation SUCCEEDED!!  🥳');

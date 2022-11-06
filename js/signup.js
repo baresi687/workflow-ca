@@ -21,7 +21,7 @@ const confirmPasswordErrorNotMatching = document.querySelector(
 );
 const generalErrorMessage = document.querySelector('#general-error-message');
 
-contactForm.addEventListener('submit', function (event) {
+contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
     let isFirstName = false;
@@ -79,7 +79,7 @@ contactForm.addEventListener('submit', function (event) {
     } else {
         confirmPasswordErrorNotMatching.classList.remove('hidden');
     }
-    let isFormValid =
+    const isFormValid =
         isFirstName &&
         isEmail &&
         isValidEmail &&

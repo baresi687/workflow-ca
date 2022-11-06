@@ -14,7 +14,7 @@ const passwordError = document.querySelector('#passwordError');
 const generalErrorMessage = document.querySelector('#general-error-message');
 
 if (logInForm) {
-    logInForm.addEventListener('submit', function (event) {
+    logInForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
         let isEmail = false;
@@ -45,7 +45,7 @@ if (logInForm) {
             passwordError.classList.remove('hidden');
         }
 
-        let isFormValid = isEmail && isValidEmail && isPassword;
+        const isFormValid = isEmail && isValidEmail && isPassword;
 
         if (isFormValid) {
             console.log('Validation SUCCEEDED!!  🥳');

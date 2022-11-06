@@ -15,7 +15,7 @@ console.log(postTitleError);
 console.log(postDescription);
 console.log(postDescriptionError);
 
-createPostForm.addEventListener('submit', function (event) {
+createPostForm.addEventListener('submit', (event) => {
     event.preventDefault();
     let isPostTitle = false;
     if (postTitle.value.trim().length > 0) {
@@ -33,7 +33,7 @@ createPostForm.addEventListener('submit', function (event) {
         postDescriptionError.classList.remove('hidden');
     }
 
-    let isFormValid = isPostTitle && isPostDescription;
+    const isFormValid = isPostTitle && isPostDescription;
 
     if (isFormValid) {
         console.log('Validation SUCCEEDED!!  🥳');

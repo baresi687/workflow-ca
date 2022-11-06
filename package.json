@@ -11,12 +11,15 @@
         "lint": "eslint .",
         "lint-fix": "eslint . --fix",
         "prepare": "husky install",
-        "test": "jest"
+        "test": "jest --coverage js/*"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@babel/core": "^7.20.2",
+        "@babel/preset-env": "^7.20.2",
         "autoprefixer": "^10.4.12",
+        "babel-jest": "^29.2.2",
         "eslint": "^8.27.0",
         "eslint-config-airbnb-base": "^15.0.0",
         "eslint-plugin-import": "^2.26.0",

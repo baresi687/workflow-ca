@@ -1,17 +1,17 @@
-import "../style.css";
-import { clearStorage } from "./utils/storage";
-import createHeaderBar from "./components/createHeaderBar";
+import '../style.css';
+import { clearStorage } from './utils/storage';
+import createHeaderBar from './components/createHeaderBar';
 
 createHeaderBar();
-const logOutBtn = document.querySelector("#logout-btn");
+const logOutBtn = document.querySelector('#logout-btn');
 
 if (logOutBtn) {
-  logOutBtn.addEventListener("click", function() {
-    logoutUser();
-  });
+    logOutBtn.addEventListener('click', function () {
+        logoutUser();
+    });
 
-  function logoutUser() {
-    clearStorage();
-    window.location.replace("/login.html");
-  }
+    function logoutUser() {
+        clearStorage();
+        window.location.replace('/login.html');
+    }
 }

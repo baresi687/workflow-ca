@@ -15,6 +15,6 @@ export async function logInUser(url, userData) {
         return responseJSON;
     } else {
         console.log('POST REQUEST LOGIN Failed!!  💩');
-        throw new Error(`An error occurred: ${responseJSON.errors[0].message}`);
+        throw new Error(responseJSON.errors[0].message);
     }
 }

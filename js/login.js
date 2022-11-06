@@ -69,7 +69,7 @@ if (logInForm) {
                     location.href = '/index.html';
                 })
                 .catch((err) => {
-                    generalErrorMessage.innerHTML = `Sorry !! ${err.message}`;
+                    generalErrorMessage.innerHTML = err;
                 });
         } else {
             console.log('Validation FAILED!! 💩');

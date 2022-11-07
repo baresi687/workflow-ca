@@ -27,6 +27,6 @@ beforeEach(() => {
 
 it('should return token when provided with valid credentials ', async () => {
     const response = await logInUser(MOCK_API_URL, MOCK_USER_DATA);
-    const accessToken = response.accessToken;
+    const { accessToken } = response;
     expect(accessToken).toBeDefined();
 });

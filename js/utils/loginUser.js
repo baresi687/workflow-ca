@@ -13,8 +13,7 @@ export async function logInUser(url, userData) {
     if (responseJSON.accessToken) {
         console.log('POST REQUEST LOGIN SUCCEEDED!!  🥳 🤗🤗');
         return responseJSON;
-    } else {
-        console.log('POST REQUEST LOGIN Failed!!  💩');
-        throw new Error(responseJSON.errors[0].message);
     }
+    console.log('POST REQUEST LOGIN Failed!!  💩');
+    throw new Error(responseJSON.errors[0].message);
 }

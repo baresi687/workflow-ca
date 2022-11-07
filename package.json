@@ -11,7 +11,7 @@
         "lint": "eslint .",
         "lint-fix": "eslint . --fix",
         "prepare": "husky install",
-        "test": "jest --coverage js/*"
+        "test": "jest --coverage"
     },
     "author": "",
     "license": "ISC",

@@ -1,5 +1,6 @@
 import { getToken } from './utils/storage';
 import { CREATE_POST_URL } from './settings/api';
+import { createPost } from './utils/createPost';
 
 const createPostForm = document.querySelector('#create-post-form');
 
@@ -48,30 +49,14 @@ createPostForm.addEventListener('submit', (event) => {
         console.log('accessToken: ', accessToken);
         console.log('CREATE_POST_URL', CREATE_POST_URL);
 
-        (async function createPost() {
-            const response = await fetch(CREATE_POST_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${accessToken}`,
-                },
-                body: JSON.stringify(postData),
-            });
-            console.log('post creation response: ', response);
-            if (response.ok) {
-                const data = await response.json();
-                console.log(data);
-                console.log('CREATE POST SUCCEEDED!!  🥳 🤗🤗');
+        createPost(CREATE_POST_URL, accessToken, postData)
+            .then((response) => {
+                createPostForm.reset();
                 location.href = '/index.html';
-            } else {
-                const err = await response.json();
-                const message = 'Creating post failed';
-                throw new Error(message);
-            }
-            createPostForm.reset();
-        })().catch((err) => {
-            console.log(err);
-        });
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     } else {
         console.log('Validation FAILED!! 💩');
     }

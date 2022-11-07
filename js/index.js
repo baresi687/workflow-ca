@@ -1,5 +1,5 @@
 import '../style.css';
-import { clearStorage } from './utils/storage';
+import { clearStorage } from './utils/clearStorage';
 import createHeaderBar from './components/createHeaderBar';
 
 createHeaderBar();

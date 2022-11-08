@@ -11,5 +11,6 @@ describe('Create post validation', () => {
         cy.get('#create-post-form').submit();
         cy.get('#postTitleError').should('not.have.class', 'hidden');
         cy.get('#postDescriptionError').should('not.have.class', 'hidden');
+        cy.url().should('include', 'create-post');
     });
 });

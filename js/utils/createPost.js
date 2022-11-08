@@ -12,7 +12,6 @@ export async function createPost(url, token, postData) {
     if (responseJSON.id) {
         console.log('CREATE POST SUCCEEDED!!  🥳 🤗🤗');
         return responseJSON;
-    } else {
-        throw new Error('Creating post failed');
     }
+    throw new Error('Creating post failed');
 }

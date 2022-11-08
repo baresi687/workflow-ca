@@ -1,5 +1,5 @@
-describe('empty spec', () => {
-    it('passes', () => {
+describe('Login form validation', () => {
+    it('should show validation errors on incorrect input and redirect to index.html on correct and valid input', () => {
         cy.visit('http://localhost:5173/login.html');
         cy.get('#email').type('invalid@email.com', { delay: 70 });
         cy.get('#password').type('less', { delay: 70 });

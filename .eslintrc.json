@@ -4,12 +4,21 @@
         "es2021": true
     },
     "extends": "airbnb-base",
-    "overrides": [],
+    "overrides": [
+        {
+            "files": ["**/*.test.js"],
+            "plugins": ["jest"],
+            "extends": ["plugin:jest/recommended"],
+            "rules": { "jest/prefer-expect-assertions": "off" }
+        }
+    ],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "rules": {
-        "indent": ["error", 4]
+        "indent": ["error", 4],
+        "no-console": "off",
+        "import/prefer-default-export": "off"
     }
 }

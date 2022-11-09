@@ -1,3 +1,5 @@
+/* eslint-disable cypress/no-unnecessary-waiting */
+
 describe('Create post validation', () => {
     it('should show error messages when required inputs are empty on submit', () => {
         cy.visit('http://localhost:5173/login.html');

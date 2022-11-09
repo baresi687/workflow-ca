@@ -5,7 +5,10 @@ describe('Login form validation', () => {
         cy.get('#password').type('less', { delay: 70 });
         cy.wait(1000);
         cy.get('#login-btn').click();
-        cy.wait(3000);
+        cy.wait(2000);
+        cy.get('#emailErrorNotValid').should('not.have.class', 'hidden');
+        cy.get('#passwordError').should('not.have.class', 'hidden');
+        cy.url().should('include', 'login.html');
         cy.get('#email').clear().type('steve.johnson@noroff.no', { delay: 70 });
         cy.get('#password')
             .clear()
